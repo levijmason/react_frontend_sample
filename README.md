@@ -10,7 +10,7 @@
 
 ## Task
 Create a blog website that dynamically renders a list of sample blogs from different authors. The site should include, but is not limited to:
-- A home page displaying the most popular blogs from each author
+- A home page displaying a selection of blogs from each author. It doesn't matter how you choose which blogs to render from each author. 
 - An author page that displays all the blogs for a specific author.
 
 The webpage may be designed any way that you would like. Feel free to modify existing files or create new files. You can add some new dependencies if you choose.
