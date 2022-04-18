@@ -1,8 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "./pages/Layout";
-import Blogs from "./pages/Blogs";
-import Authors from "./pages/Authors";
+import Blogs from "./pages/Blogs/index";
+import BlogId from "./pages/Blogs/[id]";
+import Authors from "./pages/Authors/index";
+import AuthorId from "./pages/Authors/[id]";
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -10,10 +12,15 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Blogs />} />
+          <Route index element={<Authors />} />
+          <Route path="authors/:authorId" element={<AuthorId />} />
 
-          <Route path="/authors" element={<Authors/>}/>
-          <Route path="*" element={<NotFound/>}/>
+          <Route path="blogs">
+            <Route index element={<Blogs />} />
+            <Route path=":blogId" element={<BlogId />} />
+          </Route>
+
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
